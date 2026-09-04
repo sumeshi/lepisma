@@ -1,0 +1,27 @@
+{
+  "name": "LEPISMA",
+  "build": {
+    "dockerfile": "Dockerfile"
+  },
+
+  "workspaceFolder": "/workspace",
+  "workspaceMount": "source=${localWorkspaceFolder},target=/workspace,type=bind",
+
+  "mounts": [
+    "source=lepisma-pi-home,target=/home/node/.pi/agent,type=volume"
+  ],
+
+  "runArgs": [
+    "--add-host=host.docker.internal:host-gateway"
+  ],
+
+  "containerEnv": {
+    "EDITOR": "vim",
+    "PI_CODING_AGENT_DIR": "/home/node/.pi/agent"
+  },
+
+  "postCreateCommand": "bash .devcontainer/setup-pi.sh",
+  "postStartCommand": "bash .devcontainer/setup-pi.sh",
+
+  "remoteUser": "node"
+}

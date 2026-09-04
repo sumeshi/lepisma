@@ -1,0 +1,6 @@
+{
+  "defaultProvider": "ornith",
+  "defaultModel": "Ornith-1.5-9B",
+  "defaultProjectTrust": "always",
+  "lastChangelogVersion": "0.85.0"
+}

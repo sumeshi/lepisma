@@ -1,0 +1,22 @@
+{
+  "providers": {
+    "ornith": {
+      "baseUrl": "http://192.168.1.123:8080/v1",
+      "api": "openai-completions",
+      "apiKey": "none",
+      "compat": {
+        "supportsDeveloperRole": false,
+        "supportsReasoningEffort": false
+      },
+      "models": [
+        {
+          "id": "Ornith-1.5-9B",
+          "name": "Ornith-1.5-9B",
+          "reasoning": true,
+          "contextWindow": 131072,
+          "maxTokens": 16384
+        }
+      ]
+    }
+  }
+}
